@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="registerPagecss.css">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="nav.css">
+    </head>
+
+    <script>
+        function registerBox(){
+            window.alert('You Have Registered! Please check for the email!');
+        }
+
+        function removePlaceholder(input) {
+            input.placeholder = '';
+        }
+    </script>
+
+    <body>
+
+        <nav>
+            <img src="./images/logo.png" alt="ocean wave" class="logo">
+            <div class="nav__left">
+                <a href="index.html">Home</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="activities.html">Activity</a>
+                <a href="about.html">About us</a>
+            </div>
+            <div class="nav_right">
+                <a href="donation.html">
+                    <div class="donate_btn" tabindex="0">
+                        <p>Donate</p>
+                    </div>
+                </a>
+            </div>
+        </nav>
+
+        <!-- first name
+            last name
+            email address
+            phone number
+            availablity (combo button)
+            check box ( i agree to bla bla bla)
+        -->
+        <main>
+        <div id="loginPage">
+            <form>
+                <h1>Join Us as Volunteer</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="First Name" required >
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Phone Number" required>
+                </div>
+
+                <div class="input-box">
+                    Job Position
+                    <select name="interests" id="combo_interest">
+                        <option value="" disabled selected>Please Select From Below</option>
+                        <option value="cleaner">Tout to mel</option>
+                        <option value="content_writer">Content Writer</option>
+                        <option value="marine_educator">Marine Educator</option>
+                        <option value="coordinator">Social Media Coordinator</option>
+                    </select>
+                </div> 
+
+                <!-- <div class="interests" style="font-weight: bold;">
+                    Job Position
+                    <select name="interests" id="combo_interest">
+                        <option value="cleaner">Tout to mel</option>
+                        <option value="content_writer">Content Writer</option>
+                        <option value="marine_educator">Marine Educator</option>
+                        <option value="coordinator">Social Media Coordinator</option>
+                    </select>
+                </div> -->
+
+                <div class="input-box">
+                    <label>
+                        <input type="checkbox" class="check"> I agree to the terms.
+                    </label>
+                </div>
+
+                <div id="joinButton">
+                    <button onclick="registerBox()">Join Now</button>
+                </div>
+                
+            </form>
+        </div>
+        </main>
+
+        
+
+        <script>
+
+            const logo = document.getElementsByClassName('logo')[0]
+            const main = document.querySelector('main')
+        
+            const logoHeight = logo.offsetHeight;
+        
+            setTheMarginTopOfMain(logoHeight)
+        
+        
+            function setTheMarginTopOfMain(height) {
+                main.style.marginTop = height + 'px'
+            }
+        </script>
+    </body>
+</html>

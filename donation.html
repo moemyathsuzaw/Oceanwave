@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="donation.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Donate for OceanWave</title>
+</head>
+<body>
+    <nav>
+        <img src="./images/logo.png" alt="ocean wave" class="logo">
+        <div class="nav__left">
+            <a href="index.html">Home</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="activities.html">Activity</a>
+            <a href="about.html">About us</a>
+        </div>
+        <div class="nav_right">
+            <a href="donation.html">
+                <div class="donate_btn" tabindex="0">
+                    <p>Donate</p>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <h1>Donate for OceanWave</h1>
+            <p>Support our initiatives for marine conservation and ocean protection. Your contribution makes a difference in preserving aquatic life.</p>
+        
+            <form id="donationForm" class="donation-form">
+                <div class="form-group">
+                    <label for="amount">Select Amount:</label>
+                    <div class="fixed-amounts">
+                        <button type="button" class="btn btn-outline-secondary"> $5 </button>
+                        <button type="button" class="btn btn-outline-secondary"> $15 </button>
+                        <button type="button" class="btn btn-outline-secondary"> $30 </button>
+                        <button type="button" class="btn btn-outline-secondary"> $50 </button>
+                    </div>
+                    <input type="number" class="form-control" id="amount" placeholder="Or enter custom amount" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                </div>
+        
+                <div class="form-group payment-methods">
+                    <label>Payment Methods:</label>
+                    <div class="payment-options">
+                        <button type="button" class="payment-option" onclick="selectPaymentMethod('visa')">
+                            <img src="images/visa-icon.png" alt="visa" width="50">
+                        </button>
+                        <button type="button" class="payment-option" onclick="selectPaymentMethod('paypal')">
+                            <img src="images/paypal-icon.png" alt="PayPal" width="50">
+                        </button>
+                        <button type="button" class="payment-option" onclick="selectPaymentMethod('master')">
+                            <img src="images/master-icon.png" alt="master" width="50">
+                        </button>
+                    </div>
+                </div>
+        
+                <button type="button" class="btn btn-donate btn-block" onclick="processDonation()">Donate Now</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <img src="./images/logo_whiteBg.png" alt="">
+    
+            <div class="footer-links">
+                <a href="#">Home &nbsp</a>
+                <span> |</span>
+                <a href="#">&nbsp About &nbsp</a>
+                <span>|</span>
+                <a href="#">&nbsp Contact &nbsp</a>
+                <span>|</span>
+                <a href="#">&nbsp Blog</a>
+            </div>
+    
+            <p class="footer-company-name">Copyright © 2023 <strong>OceanWave</strong> All rights reserved</p>
+        </div>
+    
+        <div class="footer-center">
+            <div>
+                <img src="./images/location.png" alt="">
+                <p><span>No-38</span>
+                   Hledan,Yangon</p>
+            </div>
+    
+            <div>
+                <img src="./images/contact.png" alt="">
+                <p>088-7446-362</p>
+            </div>
+            <div>
+                <img src="./images/mail.png" alt="">
+                <p><a href="mailto:sagar00001.co@gmail.com">oceanwave14@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the organization</span>
+                <strong>Our mission is a commitment to protect marine ecosystems, promote sustainable practices, and raise awareness about the critical challenges facing our oceans. We believe that collective action, fueled by the shared concern for our planet's aquatic treasures, can create a meaningful impact.</strong>
+            </p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com%22%3E/">
+                    <img src="./images/facebook.png" alt="">
+                </a>
+                <a href="https://www.instagram.com%22%3E/">
+                    <img src="./images/instagram.png" alt="">
+                </a>
+                <a href="https://www.twitter.com%22%3E/">
+                    <img src="./images/twitter.png" alt="">
+                </a>
+                <a href="https://www.youtube.com%22%3E/">
+                    <img src="./images/youtube.png" alt="">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+
+    const logo = document.getElementsByClassName('logo')[0]
+    const main = document.querySelector('main')
+    const buttons = document.getElementsByClassName('btn')
+    const amountHolder = document.getElementById('amount')
+    const logoHeight = logo.offsetHeight + 50;
+
+
+    for(let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', () => {
+            let numericValue = parseFloat(buttons[i].textContent.replace("$", ""));
+            amountHolder.value = numericValue
+        })
+    }
+
+    setTheMarginTopOfMain(logoHeight)
+
+
+    function setTheMarginTopOfMain(height) {
+        main.style.marginTop = height + 'px'
+    }
+</script>   
+</html>

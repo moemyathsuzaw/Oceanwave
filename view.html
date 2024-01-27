@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View | Ocean Wave</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="view.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="icon" type="image/x-icon" href="/images/fav.png">
+    
+</head>
+<body>
+    <nav>
+        <img src="./images/logo.png" alt="ocean wave" class="logo">
+        <div class="nav__left">
+            <a href="index.html">Home</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="activities.html">Activity</a>
+            <a href="about.html">About us</a>
+        </div>
+        <div class="nav_right">
+            <a href="donation.html">
+                <div class="donate_btn" tabindex="0">
+                    <p>Donate</p>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        
+        <section id="banner" class="banner">
+            <h1 id="content_title"></h1>
+        </section>
+
+        <section class="content-card">
+            <section class="content-card__details">
+                <div class="content-card__details__first-row">
+                    
+                    <img id="heart_btn" src="./images/empty_heart.png" alt="empty heart">
+                </div>
+                <div class="content-card__audio-player">
+                    <div id="audio_player_cover" class="audio-player-cover">
+                        <img id="audio_player_img" src=""  alt="" />
+                    </div>
+                    
+                    <img id="audio_state_btn" src="./images/play.png" class="play-btn" alt="">
+                    <div class="content-card__audio-player__details">
+                        <p><span id="audio_current_time">2:14</span>/<span id="audio_total_time">3:00</span></p>
+                        <div id="audio_indicator_box" class="indicator-box">
+                            <div id="audio_indicator_btn" class="indicator-btn"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_card-likes_views">
+                    <p id="content_date"></p>
+                    <p id="content_views"></p>
+                    
+                </div>
+                <div id="content_card_description" class="content_card__description">
+                    
+                </div>
+            </section>
+            <section class="content_card-btns-container">
+                <div id="prev_btn_wrapper" class="content-card-btn">
+                    <a id="previous_btn" href="">Previous</a>
+                </div>
+                <div id="next_btn_wrapper" class="content-card-btn">
+                    <a id="next_btn" href="">Next</a>
+                </div>
+            </section>
+
+            <section class="quizes">
+                <h2 class="quiz_title">Quiz time !</h2>
+                <div class="quiz_content">
+                    <div class="question">
+                        <p>Q1: What is the what is of what ?</p>
+                    </div>
+                    <div class="answers">
+                        <div class="answer_wrapper">
+                            <input type="radio" id="ans_one" name="quiz_answer">
+                            <label id="answer_one" for="ans_one" class="answer">A&#41 This is the what is of what</label>
+                            <div class="show_answer">
+
+                            </div>
+
+                        </div>
+                        <div class="answer_wrapper">
+                            <input type="radio" id="ans_two" name="quiz_answer">
+                            <label id="answer_two" for="ans_two" class="answer">B&#41That is the what is of what</label>
+                            <div class="show_answer">
+
+                            </div>
+                                
+                        </div>
+                        <div class="answer_wrapper">
+                            <input type="radio" id="ans_three" name="quiz_answer">
+                            <label id="answer_three" for="ans_three" class="answer">C&#41They are the what is of what</label>
+                            <div class="show_answer">
+
+                            </div>
+                        </div>
+                        <div class="answer_wrapper">
+                            <input type="radio" id="ans_four" name="quiz_answer">
+                            <label id="answer_four" for="ans_four" class="answer">C&#41They are the what is of what</label>
+                            <div class="show_answer">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel_quiz">
+                    <div class="ca_quiz active_quiz">
+
+                    </div>
+                    <div class="ca_quiz "></div>
+                    <div class="ca_quiz "></div>
+                </div>
+            </section>
+
+        </section>
+        <div id="share_left" class="share_left">
+            <a href="#" aria-label="share via youtube">
+                <svg width="35" height="35" viewBox="0 0 46 46" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.1667 28.75L29.1142 23L19.1667 17.25V28.75ZM41.3233 13.7425C41.5725 14.6433 41.745 15.8508 41.86 17.3842C41.9942 18.9175 42.0517 20.24 42.0517 21.39L42.1667 23C42.1667 27.1975 41.86 30.2833 41.3233 32.2575C40.8442 33.9825 39.7325 35.0942 38.0075 35.5733C37.1067 35.8225 35.4583 35.995 32.9283 36.11C30.4367 36.2442 28.1558 36.3017 26.0475 36.3017L23 36.4167C14.9692 36.4167 9.96667 36.11 7.9925 35.5733C6.2675 35.0942 5.15584 33.9825 4.67667 32.2575C4.4275 31.3567 4.255 30.1492 4.14 28.6158C4.00584 27.0825 3.94834 25.76 3.94834 24.61L3.83334 23C3.83334 18.8025 4.14 15.7167 4.67667 13.7425C5.15584 12.0175 6.2675 10.9058 7.9925 10.4267C8.89334 10.1775 10.5417 10.005 13.0717 9.89C15.5633 9.75583 17.8442 9.69833 19.9525 9.69833L23 9.58333C31.0308 9.58333 36.0333 9.89 38.0075 10.4267C39.7325 10.9058 40.8442 12.0175 41.3233 13.7425Z" fill="white"/>
+                </svg>     
+            </a>
+            <a href="#" aria-label="share via youtube">
+                <svg width="35" height="35" viewBox="0 0 40 40" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M39.1667 20C39.1667 9.42 30.58 0.833336 20 0.833336C9.42 0.833336 0.833336 9.42 0.833336 20C0.833336 29.2767 7.42667 37.0008 16.1667 38.7833V25.75H12.3333V20H16.1667V15.2083C16.1667 11.5092 19.1758 8.5 22.875 8.5H27.6667V14.25H23.8333C22.7792 14.25 21.9167 15.1125 21.9167 16.1667V20H27.6667V25.75H21.9167V39.0708C31.5958 38.1125 39.1667 29.9475 39.1667 20Z" fill="white"/>
+                </svg>
+            </a>
+            <a href="#" aria-label="share via youtube">
+                <svg width="35" height="35" viewBox="0 0 46 46" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_6)">
+                    <path d="M23 0C35.7157 0 46 10.2843 46 23C46 35.7157 35.7157 46 23 46C10.2843 46 0 35.7157 0 23C0 10.2843 10.2843 0 23 0ZM18.7943 35.1243C28.98 35.1243 34.5657 26.68 34.5657 19.3529V18.63C35.65 17.8414 36.6029 16.8557 37.3257 15.7386C36.34 16.1657 35.2557 16.4614 34.1386 16.6257C35.2886 15.9357 36.1757 14.8514 36.57 13.57C35.4857 14.1943 34.3029 14.6543 33.0543 14.9171C32.0357 13.8329 30.59 13.1757 29.0129 13.1757C25.9571 13.1757 23.46 15.6729 23.46 18.7286C23.46 19.1557 23.4929 19.5829 23.6243 19.9771C19.0243 19.7471 14.9171 17.5457 12.19 14.1943C11.73 15.0157 11.4343 15.9686 11.4343 16.9871C11.4343 18.8929 12.42 20.6014 13.8986 21.5871C12.9786 21.5871 12.1243 21.3243 11.4014 20.8971V20.9629C11.4014 23.6571 13.3071 25.8914 15.8371 26.4171C15.3771 26.5486 14.8843 26.6143 14.3914 26.6143C14.03 26.6143 13.7014 26.5814 13.34 26.5157C14.03 28.7171 16.1 30.3271 18.4986 30.36C16.5929 31.8386 14.1943 32.7257 11.5986 32.7257C11.1386 32.7257 10.7114 32.7257 10.2843 32.66C12.7157 34.2371 15.64 35.1571 18.7614 35.1571" fill="white"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1_6">
+                    <rect width="46" height="46" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>    
+            </a>
+            <a href="#" aria-label="share via youtube">
+                <svg width="35" height="35" viewBox="0 0 46 46" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.9703 3.83333C27.1266 3.83908 28.221 3.85058 29.1659 3.87741L29.5378 3.89083C29.9671 3.90616 30.3907 3.92533 30.9024 3.94833C32.9418 4.04416 34.3333 4.36616 35.5542 4.83958C36.8192 5.32641 37.8848 5.98574 38.9505 7.04949C39.9251 8.00763 40.6792 9.16662 41.1604 10.4458C41.6338 11.6667 41.9558 13.0582 42.0517 15.0995C42.0747 15.6093 42.0938 16.0329 42.1092 16.4642L42.1207 16.836C42.1494 17.779 42.1609 18.8734 42.1648 21.0297L42.1667 22.4595V24.9703C42.1714 26.3684 42.1567 27.7664 42.1226 29.164L42.1111 29.5358C42.0958 29.9671 42.0766 30.3907 42.0536 30.9005C41.9578 32.9417 41.6319 34.3313 41.1604 35.5542C40.6806 36.8341 39.9263 37.9933 38.9505 38.9505C37.9921 39.9248 36.8332 40.6789 35.5542 41.1604C34.3333 41.6338 32.9418 41.9558 30.9024 42.0517C30.4476 42.0731 29.9927 42.0922 29.5378 42.1092L29.1659 42.1207C28.221 42.1475 27.1266 42.1609 24.9703 42.1647L23.5405 42.1667H21.0316C19.6329 42.1715 18.2343 42.1568 16.836 42.1226L16.4642 42.1111C16.0092 42.0938 15.5543 42.074 15.0995 42.0517C13.0602 41.9558 11.6687 41.6338 10.4458 41.1604C9.16678 40.68 8.00825 39.9258 7.05142 38.9505C6.07592 37.9927 5.3211 36.8337 4.83959 35.5542C4.36617 34.3332 4.04417 32.9417 3.94834 30.9005C3.92698 30.4457 3.90781 29.9908 3.89084 29.5358L3.88125 29.164C3.84593 27.7664 3.82996 26.3684 3.83334 24.9703V21.0297C3.82799 19.6316 3.84204 18.2336 3.8755 16.836L3.88892 16.4642C3.90425 16.0329 3.92342 15.6093 3.94642 15.0995C4.04225 13.0582 4.36425 11.6687 4.83767 10.4458C5.31897 9.16531 6.0753 8.00596 7.05334 7.04949C8.00993 6.07482 9.16769 5.32064 10.4458 4.83958C11.6687 4.36616 13.0583 4.04416 15.0995 3.94833C15.6093 3.92533 16.0348 3.90616 16.4642 3.89083L16.836 3.87933C18.2336 3.84527 19.6316 3.83058 21.0297 3.83524L24.9703 3.83333ZM23 13.4167C20.4583 13.4167 18.0208 14.4263 16.2236 16.2236C14.4263 18.0208 13.4167 20.4583 13.4167 23C13.4167 25.5417 14.4263 27.9792 16.2236 29.7764C18.0208 31.5737 20.4583 32.5833 23 32.5833C25.5417 32.5833 27.9792 31.5737 29.7764 29.7764C31.5737 27.9792 32.5833 25.5417 32.5833 23C32.5833 20.4583 31.5737 18.0208 29.7764 16.2236C27.9792 14.4263 25.5417 13.4167 23 13.4167ZM23 17.25C23.7551 17.2499 24.5028 17.3985 25.2005 17.6873C25.8982 17.9762 26.5321 18.3996 27.0661 18.9335C27.6002 19.4673 28.0238 20.1011 28.3129 20.7987C28.602 21.4963 28.7508 22.2439 28.751 22.999C28.7511 23.7541 28.6025 24.5019 28.3136 25.1995C28.0248 25.8972 27.6014 26.5312 27.0675 27.0652C26.5337 27.5992 25.8998 28.0229 25.2023 28.3119C24.5047 28.601 23.757 28.7499 23.0019 28.75C21.4769 28.75 20.0144 28.1442 18.9361 27.0659C17.8577 25.9875 17.2519 24.525 17.2519 23C17.2519 21.475 17.8577 20.0125 18.9361 18.9341C20.0144 17.8558 21.4769 17.25 23.0019 17.25M33.0644 10.5417C32.429 10.5417 31.8196 10.7941 31.3703 11.2434C30.921 11.6927 30.6686 12.3021 30.6686 12.9375C30.6686 13.5729 30.921 14.1823 31.3703 14.6316C31.8196 15.0809 32.429 15.3333 33.0644 15.3333C33.6998 15.3333 34.3092 15.0809 34.7585 14.6316C35.2078 14.1823 35.4603 13.5729 35.4603 12.9375C35.4603 12.3021 35.2078 11.6927 34.7585 11.2434C34.3092 10.7941 33.6998 10.5417 33.0644 10.5417Z" fill="white"/>
+                </svg>     
+            </a>
+        </div>
+    </main>
+
+    
+
+
+    <p class="loading_text">Loading ...</p>
+    
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <img src="./images/logo_whiteBg.png" alt="">
+
+            <div class="footer-links">
+                <a href="#">Home &nbsp</a>
+                <span> |</span>
+                <a href="#">&nbsp About &nbsp</a>
+                <span>|</span>
+                <a href="#">&nbsp Contact &nbsp</a>
+                <span>|</span>
+                <a href="#">&nbsp Blog</a>
+            </div>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>OceanWave</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <img src="./images/location.png" alt="">
+                <p><span>No-38</span>
+                   Hledan,Yangon</p>
+            </div>
+
+            <div>
+                <img src="./images/contact.png" alt="">
+                <p>088-7446-362</p>
+            </div>
+            <div>
+                <img src="./images/mail.png" alt="">
+                <p><a href="mailto:sagar00001.co@gmail.com">oceanwave14@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the organization</span>
+                <strong>Our mission is a commitment to protect marine ecosystems, promote sustainable practices, and raise awareness about the critical challenges facing our oceans. We believe that collective action, fueled by the shared concern for our planet's aquatic treasures, can create a meaningful impact.</strong>
+            </p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com%22%3E/">
+                    <img src="./images/facebook.png" alt="">
+                </a>
+                <a href="https://www.instagram.com%22%3E/">
+                    <img src="./images/instagram.png" alt="">
+                </a>
+                <a href="https://www.twitter.com%22%3E/">
+                    <img src="./images/twitter.png" alt="">
+                </a>
+                <a href="https://www.youtube.com%22%3E/">
+                    <img src="./images/youtube.png" alt="">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <audio id="audio" src=""></audio>
+</body>
+
+<script src="./functions/view.js"></script>
+<script src="./functions/view_function.js"></script>
+</html>

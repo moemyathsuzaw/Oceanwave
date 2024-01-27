@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz Testing</title>
+        <link rel="stylesheet" href="quiz.css">
+    </head>
+
+    <body>
+        <div id="quizSection">
+
+            <div id="startArea">
+
+                <span> Lets have some fun quizes!</span>
+                <button class="quizButton" onclick="startQuiz()">
+                    Start
+                </button>
+            </div>
+
+            <div id="quizArea" style="display: none">
+                <div id="progressBar">
+                    <div class="progressMiniBar bgWhite" id="progress1"> </div>
+                    <div class="progressMiniBar bgWhite" id="progress2"> </div>
+                    <div class="progressMiniBar bgWhite" id="progress3"> </div>
+                </div>
+    
+                <div id="questionAndAnswer">
+                    <div id="question">
+                    </div>
+        
+                    <div> 
+                        <table style="height: 150px; width: 98%;">
+                            <tr>
+                                <td class="answer">
+                                    <input type="radio" id="answer-1" name="quizAns" value="0" checked>
+                                    <label for="answer-1"> </label>
+                                </td>
+        
+                                <td class="answer">
+                                    <input type="radio" id="answer-2" name="quizAns" value="1">
+                                    <label for="answer-2"></label>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="answer">
+                                    <input type="radio" id="answer-3" name="quizAns" value="2">
+                                    <label for="answer-3"> </label>
+                                </td>
+        
+                                <td class="answer">
+                                    <input type="radio" id="answer-4" name="quizAns" value="3">
+                                    <label for="answer-4"> </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- uncomment it after writing  -->
+            </div>
+
+            <div id="result" style="display: none" >
+                <img src="images/trophy.png" width="80%" height="280vw" style="margin: auto"> 
+
+                <div id="resultData">
+                    <div id="description"></div>
+                    <div id="marksResult"></div>
+                </div>
+            </div>
+            
+            <div id="buttonArea" style="display: none">
+                <button id='nextButton' class="quizButton" onclick="loadNextQuiz()">
+                    Next
+                </button>
+            </div>
+        </div>
+
+        <script src="javascript.js"></script>
+    </body>
+</html>
